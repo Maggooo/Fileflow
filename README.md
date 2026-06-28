@@ -53,7 +53,8 @@ Source/                  Destination/
 - **Modern web UI** — opens automatically in your browser, no installation needed
 - **Copy or move** — choose what happens to the originals
 - **Two organizing modes** — sort by extension/year/month, or mirror the source folder structure exactly, with no reorganizing
-- **Filter by extension** — include only `jpg png pdf` or exclude `tmp log`, with checkboxes populated by scanning the actual source folder
+- **Scan & pick extensions** — click "Scanează sursa" to list every extension actually found in the source (with a file count for each) as clickable chips, instead of typing extensions by hand and risking a typo
+- **Filter by extension** — include only specific extensions or exclude others (e.g. `tmp log`); the chips above fill this in for you, but it stays editable as plain text too
 - **Delete small files** — configurable size threshold (e.g. under 50 KB), with optional backup
 - **Duplicate detection** — via MD5 hash, skips identical files
 - **Filename conflict resolution** — automatically appends a suffix if the file already exists
