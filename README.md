@@ -22,27 +22,28 @@ see [Getting started](#getting-started) below — it takes one command.
 
 ## What it does
 
-FileFlow scans a source folder and automatically organizes files by **extension → year → month**, using the file's actual creation date.
+FileFlow scans a source folder and copies or moves its files into a destination
+folder, using whichever of the two organizing modes you pick:
+
+**Extension / year / month** (default) — sorts files by type and date, using
+the file's actual creation date:
 
 ```
-Source/
-├── photo.jpg
-├── report.pdf
-└── clip.mp4
+Source/                  Destination/
+├── photo.jpg            ├── jpg/2024/03-March/photo.jpg
+├── report.pdf            ├── pdf/2023/11-November/report.pdf
+└── clip.mp4              └── mp4/2024/01-January/clip.mp4
+```
 
-Destination/
-├── jpg/
-│   └── 2024/
-│       └── 03-March/
-│           └── photo.jpg
-├── pdf/
-│   └── 2023/
-│       └── 11-November/
-│           └── report.pdf
-└── mp4/
-    └── 2024/
-        └── 01-January/
-            └── clip.mp4
+**Keep folder structure** — mirrors the source tree exactly, 1:1, with no
+reorganizing — only the other options (copy/move, extension filters, small-file
+deletion, dedup, dry-run) still apply to decide *which* files get processed:
+
+```
+Source/                  Destination/
+├── photo.jpg            ├── photo.jpg
+└── vacation/             └── vacation/
+    └── clip.mp4              └── clip.mp4
 ```
 
 ---
@@ -51,7 +52,8 @@ Destination/
 
 - **Modern web UI** — opens automatically in your browser, no installation needed
 - **Copy or move** — choose what happens to the originals
-- **Filter by extension** — include only `jpg png pdf` or exclude `tmp log`
+- **Two organizing modes** — sort by extension/year/month, or mirror the source folder structure exactly, with no reorganizing
+- **Filter by extension** — include only `jpg png pdf` or exclude `tmp log`, with checkboxes populated by scanning the actual source folder
 - **Delete small files** — configurable size threshold (e.g. under 50 KB), with optional backup
 - **Duplicate detection** — via MD5 hash, skips identical files
 - **Filename conflict resolution** — automatically appends a suffix if the file already exists
