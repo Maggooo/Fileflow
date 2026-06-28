@@ -73,7 +73,7 @@ Destination/
 
 ```bash
 # Clone the repo
-git clone https://github.com/USERNAME/fileflow.git
+git clone https://github.com/Maggooo/fileflow.git
 cd fileflow
 
 # Start
